@@ -22,12 +22,12 @@ def insertNum(win, num, position, grid, prev, first):
         if first == False:
 
             pygame.draw.rect(win, background_color, ((prevCol+1)*50 + buffer, (prevRow+1)*50+ buffer,50 -2*buffer , 50 - 2*buffer))
-            value = myfont.render(str(num), True, (0,0,0))
+            value = myfont.render(str(prev[2]), True, (0,0,0))
             win.blit(value, ((prevCol+1)*50 +15, (prevRow+1)*50))
         else:
             first = False
-        prevCol = position[0]
-        prevRow = position[1]
+        # prevCol = position[0]
+        # prevRow = position[1]
     
 
     grid[position[0]][position[1]] = num

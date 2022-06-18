@@ -35,7 +35,8 @@ def main():
     pygame.display.update()
 
     
-    prev = [0,0]
+    prev = [0,0,0]
+    prev[2] = grid[0][0]
     # print(grid[0][0])
     runOnce = True
     firstRun = True
@@ -44,6 +45,7 @@ def main():
             s = solve(grid,win, prev,firstRun)
             if s:
                 runOnce = False
+                print(grid)
         for event in pygame.event.get(): 
                     
             if event.type == pygame.QUIT:

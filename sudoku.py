@@ -22,6 +22,7 @@ def solve(bo, win, prev,firstRun):
             firstRun = False
             prev[0] = row
             prev[1] = col
+            prev[2] = i
             time.sleep(pauseTime)
             if solve(bo, win, prev,firstRun):
                 return True
